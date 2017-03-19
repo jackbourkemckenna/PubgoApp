@@ -55,16 +55,13 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView2" />
 
-    <TextView
+    <Button
         android:text="Map"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/tvWelcomeMsg"
-        android:layout_toEndOf="@+id/tvWelcomeMsg"
-        android:layout_marginLeft="24dp"
-        android:layout_marginStart="24dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="70dp"
-        android:id="@+id/tvMapLink" />
+        android:id="@+id/bMap" />
 
 </RelativeLayout>
