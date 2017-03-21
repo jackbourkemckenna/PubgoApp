@@ -40,6 +40,17 @@ public class UserAreaActivity extends AppCompatActivity {
         });
 
 
+        //location map link
+
+        Button bLocation = (Button) findViewById(R.id.bLocation);
+
+        bLocation.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(UserAreaActivity.this, LocationSourceDemoActivity.class));
+            }
+        });
+
+
 
     }
 }

@@ -59,9 +59,19 @@
         android:text="Map"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/bMap"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/bLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="70dp"
-        android:id="@+id/bMap" />
+        android:text="Map" />
 
 </RelativeLayout>
