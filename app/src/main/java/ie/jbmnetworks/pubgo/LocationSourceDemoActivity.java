@@ -15,7 +15,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 
 /**
- * This shows how to use a custom location source.
+ * This shows how a user would enter a custom location source.
  */
 public class LocationSourceDemoActivity extends AppCompatActivity implements OnMapReadyCallback {
 
