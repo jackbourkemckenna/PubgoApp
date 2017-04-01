@@ -2,11 +2,14 @@ package ie.jbmnetworks.pubgo;
 
 import android.*;
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -31,6 +34,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      */
     private GoogleApiClient client;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +47,26 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+
+
+        //profile link button.
+
+        Button bProfile = (Button) findViewById(R.id.bProfile);
+
+        bProfile.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MapsActivity.this, ProfileActivity.class));
+            }
+        });
+
+        //Exit link button.
+        Button bExit = (Button) findViewById(R.id.bExit);
+
+        bExit.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View e) {
+                startActivity(new Intent(MapsActivity.this, ExitActivity.class));
+            }
+        });
     }
 
 
@@ -63,6 +87,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng dublin = new LatLng(-6.266155, 53.350140);
         mMap.addMarker(new MarkerOptions().position(dublin).title("Marker in Dublin"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin));
+
+
     }
 
 
@@ -119,5 +145,5 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
 
-    }
+}
 
