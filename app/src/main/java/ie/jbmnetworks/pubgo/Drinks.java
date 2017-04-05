@@ -13,7 +13,7 @@ public class Drinks extends StringRequest {
     private static final String LOGIN_REQUEST_URL = "https://pubgo-jackbourkemckenna.c9users.io/app/drinksApp.php";
 
 
-    public Drinks(int method, int url, Response.Listener<String> listener, Response.ErrorListener errorListener) {
+    public Drinks(int method, int url, Response.Listener<Integer> listener, Response.ErrorListener errorListener) {
         super(Request.Method.POST, LOGIN_REQUEST_URL, listener, null);
 
         params.put("name", name);
