@@ -40,7 +40,7 @@ public class MapActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        //dealing with run time premishions
+        //dealing with run time premishions.
         requestPermission();
         placeNameText = (TextView) findViewById(R.id.tvPlaceName);
         placeAddressText = (TextView) findViewById(R.id.tvPlaceAddress);
