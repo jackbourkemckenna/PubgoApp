@@ -23,8 +23,23 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 
-//callback interface for when the map is ready for the user to use
+/*DO NOT USE ANYMORE USE MAP ACTIVITY
 
+
+
+
+------------------DO NOT USE ANYMORE USE MAP ACTIVITY ----------------------------------
+
+
+
+
+
+
+
+
+
+
+*/
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -63,7 +78,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Button bExit = (Button) findViewById(R.id.bExit);
 
         bExit.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View e) {
+            public void onClick(View v) {
                 startActivity(new Intent(MapsActivity.this, ExitActivity.class));
             }
         });

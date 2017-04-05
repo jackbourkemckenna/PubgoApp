@@ -35,7 +35,7 @@ public class UserAreaActivity extends AppCompatActivity {
 
         bMap.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                startActivity(new Intent(UserAreaActivity.this, MapsActivity.class));
+                startActivity(new Intent(UserAreaActivity.this, MapActivity.class));
             }
         });
 
