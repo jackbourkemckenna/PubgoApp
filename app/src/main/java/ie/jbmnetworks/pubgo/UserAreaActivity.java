@@ -41,7 +41,7 @@ public class UserAreaActivity extends AppCompatActivity {
 
 
         //location map link
-
+/*
         Button bLocation = (Button) findViewById(R.id.bLocation);
 
         bLocation.setOnClickListener(new View.OnClickListener(){
@@ -51,6 +51,6 @@ public class UserAreaActivity extends AppCompatActivity {
         });
 
 
-
+*/
     }
 }
