@@ -15,13 +15,6 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        Button bFavorite = (Button) findViewById(R.id.bFavorite);
-
-        bFavorite.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                startActivity(new Intent(ProfileActivity.this, FavoriteActivity.class));
-            }
-        });
     }
 
 }
