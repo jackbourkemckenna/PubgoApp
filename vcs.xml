@@ -10,6 +10,10 @@
           <option name="url" value="https://github.com/jackbourkemckenna/PubgoApp" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/CodingPeaches90/Poly_Wuff.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="$USER_HOME$/Desktop" />
