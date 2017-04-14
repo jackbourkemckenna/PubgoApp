@@ -2,4 +2,8 @@
     <string name="app_name">PubGo</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_profile">ProfileActivity</string>
+
+    <string name="title_activity_test">testActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
