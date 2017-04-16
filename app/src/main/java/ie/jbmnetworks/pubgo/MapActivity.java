@@ -16,8 +16,13 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.PlaceBuffer;
+import com.google.android.gms.location.places.Places;
 import com.google.android.gms.location.places.ui.PlacePicker;
+
+import static ie.jbmnetworks.pubgo.R.id.tvPlace;
 
 /**
  * Created by Jack on 4/5/2017.
@@ -29,6 +34,7 @@ public class MapActivity extends AppCompatActivity {
     TextView placeAddressText;
     WebView attributionText;
     Button getPlaceButton;
+    Button bMark;
     private final static int MY_PERMISSION_FINE_LOCATION = 101;
 
     private final static int PLACE_PICKER_REQUEST = 1;
@@ -46,6 +52,8 @@ public class MapActivity extends AppCompatActivity {
         placeAddressText = (TextView) findViewById(R.id.tvPlaceAddress);
         attributionText = (WebView) findViewById(R.id.wvAttribution);
         getPlaceButton = (Button) findViewById(R.id.btGetPlace);
+        bMark = (Button) findViewById(R.id.btMark);
+        placeIdText = (TextView) findViewById(tvPlace);
 
         Button bProfile = (Button) findViewById(R.id.bProfile);
 
@@ -63,6 +71,8 @@ public class MapActivity extends AppCompatActivity {
                 startActivity(new Intent(MapActivity.this, ExitActivity.class));
             }
         });
+
+
 
         getPlaceButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,6 +130,16 @@ public class MapActivity extends AppCompatActivity {
                 Place place = PlacePicker.getPlace(MapActivity.this, data);
                 placeNameText.setText(place.getName());
                 placeAddressText.setText(place.getAddress());
+                final CharSequence placeIdVar   = place.getId();
+                if(placeIdVar.equals("ChIJCVErT4wOZ0gRTb822t6ZGw4" )){
+                    placeIdText.setText(placeIdVar+"Woop");
+
+                }else{
+                    placeIdText.setText("Nope");
+                }
+
+
+
 
 
                 if (place.getAttributions() == null) {
@@ -134,4 +154,9 @@ public class MapActivity extends AppCompatActivity {
 
         }
     }
+
+
+
+
+
 }
