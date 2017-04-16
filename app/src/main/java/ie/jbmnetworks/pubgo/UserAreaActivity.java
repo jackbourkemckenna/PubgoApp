@@ -22,12 +22,20 @@ public class UserAreaActivity extends AppCompatActivity {
         TextView tvWelcomeMsg = (TextView) findViewById(R.id.tvWelcomeMsg);
         EditText etUsername = (EditText) findViewById(R.id.etUsername);
         EditText etAge = (EditText) findViewById(R.id.etAge);
+        Button bMark =(Button) findViewById(R.id.btMark);
 
         // Display user details
         String message = name + " welcome to your user area";
         tvWelcomeMsg.setText(message);
         etUsername.setText(username);
+        //Test Button
 
+
+        bMark.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(UserAreaActivity.this, testActivity.class));
+            }
+        });
 
 
         //map link button.
