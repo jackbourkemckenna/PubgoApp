@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.common.api.ResultCallback;
@@ -38,14 +39,12 @@ public class MapActivity extends AppCompatActivity {
     private final static int MY_PERMISSION_FINE_LOCATION = 101;
 
     private final static int PLACE_PICKER_REQUEST = 1;
-
-
+    RequestQueue requestQueue;
+    private UserAreaActivity userAreaActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         //dealing with run time premishions
         requestPermission();
         placeNameText = (TextView) findViewById(R.id.tvPlaceName);
@@ -77,6 +76,7 @@ public class MapActivity extends AppCompatActivity {
         getPlaceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
 
                 //make intent builder
 
@@ -131,6 +131,7 @@ public class MapActivity extends AppCompatActivity {
                 placeNameText.setText(place.getName());
                 placeAddressText.setText(place.getAddress());
                 final CharSequence placeIdVar   = place.getId();
+
                 if(placeIdVar.equals("ChIJCVErT4wOZ0gRTb822t6ZGw4" )){
                     placeIdText.setText("This place is registered");
 
